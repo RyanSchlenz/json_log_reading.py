@@ -1,0 +1,37 @@
+[
+  {
+    "user": {
+      "name": "sarah",
+      "ip_address": "172.16.0.20",
+      "UserId": "sarahsDesktop"
+    }
+  },
+  {
+    "user": {
+      "name": "michael",
+      "ip_address": "192.168.1.10",
+      "UserId": "michaelsLaptop"
+    }
+  },
+  {
+    "user": {
+      "name": "maryann",
+      "ip_address": "10.0.0.123",
+      "UserId": "maryannsMac"
+    }
+  },
+  {
+    "user": {
+      "name": "lisa",
+      "ip_address": "10.1.0.75",
+      "UserId": "lisasPC"
+    }
+  },
+  {
+    "user": {
+    "name": "ryan",
+    "ip_address": "192.158.1.38",
+    "UserId": "ryansMac"
+    }
+  }
+]

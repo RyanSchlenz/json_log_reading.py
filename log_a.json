@@ -1,0 +1,30 @@
+[
+  {
+    "user": {
+      "name": "ryan",
+      "ip_address": "192.158.1.38",
+      "UserId": "ryansMac"
+    }
+  },
+  {
+    "user": {
+      "name": "emma",
+      "ip_address": "192.168.0.55",
+      "UserId": "emmasLaptop"
+    }
+  },
+  {
+    "user": {
+      "name": "ethan",
+      "ip_address": "192.168.1.55",
+      "UserId": "ethansLaptop"
+    }
+  },
+  {
+    "user": {
+      "name": "maryann",
+      "ip_address": "10.0.0.123",
+      "UserId": "maryannsMac"
+    }
+  }
+]
