@@ -55,8 +55,8 @@ class EntryMatcher:
             print("No matching entries found.")
 
 # Paths to CSV and JSON files
-csv_file_path = '/Users/ryan/Desktop/JLogAnalysis/LogAnalysis/logs/log.csv'
-json_file_path = '/Users/ryan/Desktop/JLogAnalysis/json_matches.json'
+csv_file_path = 'log.csv'
+json_file_path = 'json_matches.json'
 output_file_path = 'csv_json_matches.json'
 
 # Check if the JSON file (json_matches) exists before processing
