@@ -1,5 +1,7 @@
 import json
 
+log_file_paths = ['LogAnalysis/logs/log_a.json', 'LogAnalysis/logs/log_b.json']
+
 # Open and read the JSON file
 def openJsonLogFile(*paths):
     for path in paths:
@@ -31,8 +33,6 @@ def parseJsonLog(log_entry):
         r["error"] = "Invalid JSON format"
         return r
 
-import json
-
 # Function to compare JSON log files
 def compare_json(*args):
     if len(args) < 2:
@@ -56,6 +56,5 @@ def save_common_values_to_json(log_file_paths, output_file_path):
         json.dump(common_values, json_file, indent=4)
 
 # Usage
-log_file_paths = ['LogAnalysis/logs/log_a.json', 'LogAnalysis/logs/log_b.json']
 output_file_path = 'json_matches.json'
 save_common_values_to_json(log_file_paths, output_file_path)
