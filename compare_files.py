@@ -42,8 +42,8 @@ def find_and_save_matching_entries(csv_file_path, json_file_path, output_file_pa
         print("No matching entries found.")
 
 # Paths to CSV and JSON files
-csv_file_path = '/Users/ryan/Desktop/JLogAnalysis/LogAnalysis/logs/log.csv'
-json_file_path = '/Users/ryan/Desktop/JLogAnalysis/json_matches.json'
+csv_file_path = 'log.csv'
+json_file_path = 'json_matches.json'
 output_file_path = 'csv_json_matches.json'
 
 # Call the function to find and save matching entries
