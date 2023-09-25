@@ -1,6 +1,7 @@
+import config
 import json
 
-log_file_paths = ['LogAnalysis/logs/log_a.json', 'LogAnalysis/logs/log_b.json']
+log_file_paths = config.LOG_FILE_PATHS
 
 # Open and read the JSON file
 def openJsonLogFile(*paths):
@@ -13,6 +14,8 @@ def openJsonLogFile(*paths):
             except json.JSONDecodeError:
                 # Handle the case when the entire file is not valid JSON
                 print(f"Invalid JSON in the file: {path}")
+
+
 
 
 # parse the JSON file, store in dictionary 
