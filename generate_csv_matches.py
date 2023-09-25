@@ -1,7 +1,8 @@
 import csv
 import json
 import os
-from generate_json_matches import save_common_values_to_json
+from p_generate_json_matches import save_common_values_to_json
+import config
 
 
 class EntryMatcher:
@@ -55,9 +56,9 @@ class EntryMatcher:
             print("No matching entries found.")
 
 # Paths to CSV and JSON files
-csv_file_path = 'log.csv'
-json_file_path = 'json_matches.json'
-output_file_path = 'csv_json_matches.json'
+csv_file_path = config.CSV_FILE_PATH
+json_file_path = config.JSON_FILE_PATH
+output_file_path = config.OUTPUT_FILE_PATH
 
 # Check if the JSON file (json_matches) exists before processing
 if os.path.exists(json_file_path):
@@ -66,5 +67,3 @@ if os.path.exists(json_file_path):
     entry_matcher.find_and_save_matching_entries()
 else:
     print(f"The file {json_file_path} does not exist.")
-
-# Generate json_matches (you can add your code here to generate json_matches using p_scripts.save_common_values_to_json)
