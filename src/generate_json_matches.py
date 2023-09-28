@@ -1,7 +1,4 @@
-import config
 import json
-
-log_file_paths = config.LOG_FILE_PATHS
 
 # Open and read the JSON file
 def openJsonLogFile(*paths):
@@ -14,9 +11,6 @@ def openJsonLogFile(*paths):
             except json.JSONDecodeError:
                 # Handle the case when the entire file is not valid JSON
                 print(f"Invalid JSON in the file: {path}")
-
-
-
 
 # parse the JSON file, store in dictionary 
 def parseJsonLog(log_entry):
@@ -45,8 +39,9 @@ def compare_json(*args):
 
     return list(common_values)
 
-def save_common_values_to_json(log_file_paths, output_file_path):
+def create_json(log_file_paths, output_file_path):
     common_values = []
+
     for i, file_path1 in enumerate(log_file_paths):
         for file_path2 in log_file_paths[i + 1:]:
             data1 = list(openJsonLogFile(file_path1))
@@ -55,9 +50,5 @@ def save_common_values_to_json(log_file_paths, output_file_path):
             common_values.extend(compare_json(data1, data2))
 
     # Save common values to a JSON file
-    with open(output_file_path, 'w') as json_file:
-        json.dump(common_values, json_file, indent=4)
-
-# Usage
-output_file_path = 'json_matches.json'
-save_common_values_to_json(log_file_paths, output_file_path)
+    with open(output_file_path, 'w+') as json_file:
+        json.dump(common_values, json_file)
